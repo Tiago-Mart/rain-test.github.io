@@ -1,0 +1,187 @@
+html,body{
+    margin: 0px;
+
+}
+
+div.geral{
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    background:  linear-gradient(180deg, #181928 0%, #12121D 100%);
+}
+
+svg.logo-menu{
+    position: fixed;
+    z-index: 2000;
+}
+
+section.header{
+    box-sizing: border-box;
+    background-color: #1A1B29;
+    width: 80px;
+    padding: 20px;
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+section.itens-header{
+    box-sizing: border-box;
+}
+
+.itens-header{
+    height: 70%;
+    margin: 95px 0px 70px 0px;
+}
+
+@keyframes fade-in {
+    0%{
+      opacity: 0;
+      top: 20px;
+    }
+    30%,
+    70% {
+      opacity: 1;
+      top: 0px;
+    }
+}
+
+
+
+@keyframes fade-in-svg{
+    0%{
+        opacity: 0;
+        top: -10px;
+      }
+      30%,
+      100% {
+        opacity: 1;
+        top: 0px;
+      }
+
+}
+
+@keyframes fade-in-menu{
+    0%{
+        opacity: 0;
+        top: -300px;
+      }
+      30%,
+      100% {
+          opacity: 1;
+        top: 0px;
+      }
+
+}
+
+@keyframes fade-out-menu{
+    0%{
+        opacity: 1;
+        top: 0px;
+    }
+    30%,
+    100% {
+        opacity: 0;
+        top: -300px;
+    }
+
+}
+
+.fade-in-menu{
+    animation: fade-in-menu 5.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.fade-out-menu{
+    animation: fade-out-menu 5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+
+.texto-header {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 0.6px;
+    text-align: center;
+    display: inline;
+    position: relative;
+    animation: fade-in 1.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+    top: 0px;
+    float: left;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.fade-in-svg{
+    display: inline;
+    position: relative;
+    top: 0px;
+    animation: fade-in-svg 4.5s cubic-bezier(0.23, 1, 0.320, 1);
+    float: left;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+
+
+section.header a{
+    color:#484452 ;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+section.header a:hover{
+    color: #6833FF;
+}
+
+section.header a span{
+    display: none;
+}
+
+section.header a svg{
+    width: 25px;
+    height: 25px;
+    
+}
+
+.selecionado{
+    color: #6833FF;
+    background-color: rgba(105, 51, 255, 0,3);
+}
+
+@media (min-width: 700px){
+    section.header{
+        width: 100px;
+    }
+
+    section.header svg, svg.logo-menu{
+        width: 63px;
+        height:66px;
+    }
+
+    section.header a{
+        width: 70px;
+        height: 70px;
+    }
+
+    section.itens-header{
+        margin: 120px 0px 80px 0px
+    }
+
+    section.header a svg{
+        width: 30px;
+        height: 30px;
+    }
+
+}
+
+
+
+
+  
