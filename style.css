@@ -1,0 +1,77 @@
+html,body{
+    margin: 0px;
+    padding: 0px;
+}
+
+div.geral{
+    height: 100vh;
+    width: 100vw;
+    padding: 20px;
+    box-sizing: border-box;
+    background:  linear-gradient(180deg, #181928 0%, #12121D 100%);
+}
+
+section.content{
+    box-sizing: border-box;
+}
+
+input.special-button, input.normal-button{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 0.08em;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+}
+
+input.special-button{
+
+    width: 225px;
+    margin: 10px;
+    border-radius: 8px;
+    padding: 18px 36px 18px 36px;
+    background: linear-gradient(235.84deg, #6833FF 31.88%, #00F2C3 128.64%);
+    transition: 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+}
+
+input.special-button:active{
+    transform: scale(.9);
+}
+
+
+
+
+input.normal-button{
+    background-color: #6833FF;
+    margin: 10px 0px 10px 0px;
+    padding: 18px 32px;
+    border-radius: 20px;
+
+}
+
+input.disabled{
+    font-weight: normal;
+    background-color: #353749;
+    color: #A29FA5;
+    transition: 0.25s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+input.disabled:hover{
+    background-color: #2a2d3b;
+}
+
+
+@media (min-width: 700px){
+    input.special-button{
+        width: 300px;
+        font-size: 18px;
+        line-height: 27px;
+    }
+}
