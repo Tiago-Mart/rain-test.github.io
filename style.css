@@ -1,0 +1,421 @@
+html,body{
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+div.geral{
+    height: 100%;
+    width: 100vw;
+    position: absolute;
+    box-sizing: border-box;
+    background:  linear-gradient(180deg, #181928 0%, #12121D 100%);
+}
+
+section.content-container{
+    box-sizing: border-box;
+    display: flex;
+    padding: 0px;
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* Mudança de página - Talvez?*/
+div.entradas{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+div.entrada1, div.entrada2, div.entrada1 div.bloco-entrada1,  div.entrada2 div.bloco-entrada2{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 3em rgba(0, 0, 0, 0.4);
+}
+
+
+
+
+
+
+div.entrada1{
+    display: inline-block; 
+    animation: entrada1 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+
+}
+
+div.entrada1 div.bloco-entrada1{
+    animation: bloco-entrada1 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+div.entrada2 {
+    display: none;
+    transform: scaleX(1);
+    animation: entrada2 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+div.entrada2 div.bloco-entrada2{
+    animation: bloco-entrada2 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+
+@keyframes entrada1{
+    0%{
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+    100%{
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+}
+
+@keyframes bloco-entrada1{
+    0%{
+        animation-delay: 0.2s;
+        transform: scaleX(0.15);
+        transform-origin: left;
+    }
+    100%{
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+}
+
+@keyframes entrada2{
+    0%{
+        transform: scaleX(1);
+        transform-origin: right;
+    }
+    100%{
+        transform: scaleX(0);
+        transform-origin: right;
+    }
+}
+
+@keyframes bloco-entrada2{
+    0%{
+        transform: scaleX(1);
+        transform-origin: right;
+    }
+    100%{
+        transform: scaleX(0);
+        transform-origin: right;
+    }
+}
+
+
+/* Animação 1 */
+div.animation-1{
+    height: 50px;
+    width: 90%;
+    display: none;
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+    transform-origin: 100%;
+}
+
+
+
+div.animation-1 p, div.svg-div div p{
+    text-align: center;
+    position: relative;
+    display: none;
+    top: 0px;
+    float: left;
+    text-align: left;
+    text-transform: uppercase;
+    animation: fade-in-out 1.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+    font-size: 20px;
+    font-weight: 800;
+    font-style: normal;
+    letter-spacing: 0.08em;
+    color: white;
+}
+@keyframes fade-in-out {
+    0%{
+        opacity: 0;
+        top: 20px;
+    }
+    30%, 60%,
+    70% {
+        animation-delay: 3s;
+        opacity: 1;
+        top: 0px;
+    }
+    100%{
+        opacity: 0;
+        top: -20px;
+    }
+}
+
+@keyframes animation-1 {
+    0%{
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+    100%{
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+}
+
+@keyframes bloco-1 {
+    0%{
+        transform: scaleX(0.35);
+        transform-origin: left;
+    }
+    100%{
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+}
+
+@keyframes animation-2 {
+    0%{
+        transform: scaleX(1);
+        transform-origin: right;
+    }
+    100%{
+        transform: scaleX(0);
+        transform-origin: right;
+    }
+}
+
+@keyframes bloco-2 {
+    0%{
+        transform: scaleX(1);
+        transform-origin: right;
+    }
+    100%{
+        transform: scaleX(0);
+        transform-origin: right;
+    }
+}
+
+@keyframes desaparecer{
+    0%{
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+    100%{
+        transform: scaleY(0);
+        transform-origin: top;
+    }
+}
+
+.desaparecer{
+    animation: desaparecer 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+div.verde1, div.verde2, div.verde1 div.bloco1, div.verde2 div.bloco2{
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    position: relative;
+    float: left;
+}
+
+div.verde2{
+    display: none;
+    transform: scaleX(1);
+    animation: animation-2 0.8s  cubic-bezier(0.645, 0.045, 0.355, 1);
+    background-color: #a281ff;
+}
+
+div.verde1{
+    transform: scaleX(0);
+    animation: animation-1 0.5s cubic-bezier(0.215, 0.610, 0.355, 1);
+    background-color: #a281ff;
+}
+
+div.verde1 div.bloco1{
+    transform: scaleX(0);
+    animation: bloco-1 0.5s cubic-bezier(0.215, 0.610, 0.355, 1);
+    background-color: #6833FF;
+}
+
+div.verde2 div.bloco2{
+    transform: scaleX(1);
+    animation: bloco-2 0.8s cubic-bezier(0.215, 0.610, 0.355, 1);
+    background-color: #6833FF;
+}
+
+/* Animação 2*/
+div.svg-div{
+    display: none;
+    flex-direction: column;
+    width: 150px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+div.svg-div div.text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+}
+
+div.svg-div div.text p{
+    text-align: center;
+    letter-spacing: 0.15em;
+    font-size: 25px;
+    animation: fade-in 2.5s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+div.svg-anim{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+
+}
+
+svg#teste1 path, svg#teste2 path{
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation: svg1 5s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards ;
+}
+
+svg#teste1{
+    width: 150px;
+    height: 150px;
+}
+
+svg#teste2{
+    width: 150px;
+    height: 150px;
+}
+
+svg#teste1 path{   
+    animation: svg1 8.9s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards ;
+}
+
+svg#teste2 path{
+    animation-duration: 6s;
+    animation-delay: 0.4s;
+}
+
+div.svg-anim svg#teste2{
+    position: absolute;
+    animation: svg2 0.25s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
+    animation-delay: 1s;
+    
+}
+
+@keyframes svg1{
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes svg2{
+    from{
+        fill: transparent;
+    }
+
+
+    to{
+        fill: #6833FF;
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fade-in{
+
+    0%{
+        opacity: 0;
+        top: 20px;
+    }
+    30%, 60%,
+    100% {
+        opacity: 1;
+        top: 0px;
+    }
+  
+}
+
+@keyframes fade-out{
+
+    0%{
+        opacity: 1;
+    }
+    30%, 60%,
+    100% {
+        opacity: 0;
+    }
+
+
+  
+}
+
+.fade-out{
+    animation: fade-out 1.9s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+
+
+
+div.animation-2 div.teste1, div.teste2{
+    width: 100%;
+    height: 100%;
+    background-color: #6833FF;
+    transform-origin: left;
+    animation: teste1 0.95s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+div.teste2{
+    display: none;
+    transform-origin: right;
+    animation: teste2 0.95s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+@keyframes teste1{
+    0%{
+        transform:scaleX(0);
+    }
+    100%{
+        transform:  scaleX(1);
+    }
+}
+
+@keyframes teste2{
+    0%{
+        transform:scaleX(1);
+    }
+    100%{
+        transform:  scaleX(0);
+    }
+}
+
+
+/* Pc */
+@media (min-width: 900px){
+    div.geral{
+        height: 100vh;
+    }
+
+    div.animation-1{
+        width: 20%;
+    }
+
+    div.animation-1 p{
+        font-size: 16px;
+    }
+
+    
+}
