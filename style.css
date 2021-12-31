@@ -1,0 +1,250 @@
+:root {
+    --fa-font-solid: 'Font Awesome 6 Free' 900;
+    --clr-default-purple: #6933ff;
+    --clr-dark-purple: #4111a6;
+    --clr-green-system: #00f0c0;
+    --clr-blue-system: #0098f0;
+    --clr-red-system: #fa194e;
+    --clr-darkred-system: #930b54;
+    --clr-grey-iput: #36384a;
+    --clr-grey-text: #a3a0a6;
+    --clr-grey-2: #474351;
+    --clr-background-top: #191a2a;
+    --clr-background-bottom: #11111c;
+}
+
+h4 {
+    display: inline;
+    color: white;
+    font-weight: 600;
+    font-family: "Poppins";
+    font-size: clamp(
+              1rem,
+              4vw + 1rem,
+              1.333rem
+          );
+}
+  
+h3 {
+    display: inline;
+    color: white;
+    font-weight: 600;
+    font-family: "Poppins";
+    font-size: clamp(
+              1rem,
+              4vw + 1rem,
+              1.776889rem
+          );
+}
+  
+h2 {
+    display: inline;
+    color: white;
+    font-weight: 600;
+    font-family: "Poppins";
+    font-size: clamp(
+              1rem,
+              4vw + 1rem,
+              2.368593037rem
+          );
+}
+  
+h1 {
+    display: inline;
+    color: white;
+    font-weight: 600;
+    font-family: "Poppins";
+    font-size: clamp(
+              1rem,
+              4vw + 1rem,
+              3.1573345183rem
+          );
+}
+
+html, body {
+    margin: 0;
+    padding: 10px;
+}
+  
+body {
+    background-color: var(--clr-background-bottom);
+    
+}
+
+/**/
+.relax-audio{
+    background-color: rgba(0, 0, 0, 0.15);
+    outline: 2px solid white;
+    outline-offset: -10px;
+    width: 16rem;
+    height: 20rem;
+    padding: 0.85rem;
+    position: absolute;
+    inset: 0rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.relax-audio .text{
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.relax-audio .text::before, .relax-audio .text::after{
+    
+    content: '';
+    position: absolute;
+    z-index: 200;
+    width: 20px;
+    height: 2px;
+    background-color: white;
+    animation: appear .6s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+
+
+@keyframes appear{
+    from{
+        transform: scaleX(0);
+    }
+    to{
+        transform: scaleX(1);
+    }
+}
+
+.relax-audio .text::before{
+    transform-origin: right;
+    margin-left: -8.9rem;
+}
+
+.relax-audio .text::after{
+    transform-origin: left;
+    margin-left: 8.9rem;
+}
+
+.svg--audio{
+    width: 10rem;
+    aspect-ratio: 1;
+    transition: .3s cubic-bezier(0.215, 0.610, 0.355, 1);
+    transform: scale(0.85);
+
+}
+
+.svg--audio path{
+    
+    transform-origin: center;
+    transition: 0.5s cubic-bezier(0.215, 0.610, 0.355, 1);
+    
+}
+
+.svg--audio:hover{
+    cursor: pointer;
+    filter: brightness(70%);
+}
+
+.clicked{
+    transition: .3s cubic-bezier(0.215, 0.610, 0.355, 1);
+    transform: scale(1);
+}
+.clicked path{
+    
+    stroke: var(--clr-default-purple);
+}
+
+@keyframes teste1{
+    to{
+        transform: scale(1.2);
+    }
+}
+
+input[type=range]{
+    appearance: none;
+    height: 7px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.2); 
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+
+input[type=range]::before,
+input[type=range]::after{
+    position: absolute;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 900;
+    color: var(--clr-grey-2);
+}
+
+input[type=range]::before{
+    content: '\f026';
+    left: 55px;
+}
+input[type=range]::after{
+    content: "\f028";
+    margin-left: 9rem;
+    
+    
+    
+}
+
+input[type=range]:focus-visible{
+    outline: var(--clr-blue-system) 3px solid;
+    outline-offset: 5px;
+}
+
+input[type=range]::-webkit-slider-thumb{
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    background-color: var(--clr-default-purple);
+    border-radius: 50%;
+}
+
+div.volume-value{
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+span.volume-text{
+
+    font-family: 'Poppins', sans-serif;
+    color: var(--clr-grey-text);
+}
+
+span.value{
+    font-family: 'Work Sans', sans-serif;
+    color: white;
+    margin-left: 0.5rem;
+}
+
+
+
+.audio--controls{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 2.8rem;
+}
+
+
+
+
+
